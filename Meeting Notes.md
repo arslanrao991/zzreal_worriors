@@ -14,3 +14,8 @@ Status: In Progress
 - Discuss about project and selected Metabase as testing
 - Discuss about User Stories and divide work among ourselves
 - Discuss about how to use Gerkin language to do automation
+
+## Meeting 3 (11 March 2023)
+
+- Discuss different errors occurs during automation part and successfully debug
+- Explains the working of auomation with team members and show how it works
