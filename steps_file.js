@@ -52,5 +52,21 @@ module.exports = function() {
       I.see(s_n,'.my1.input.block.full');
     },
 
+
+    type_sql_query: function(q){
+      I.fillField("//div[@id='id_sql']" , q);
+    },
+
+    see_text_in_sql_editor: function(text)
+    {
+      I.see(text,"//div[@id='id_sql']");
+    },
+
+    type_the_filter_widget: function(fw){
+      I.fillField({xpath: '//*[@id="root"]/div/div/main/div/div/div[2]/main/div[1]/div/div[1]/div[2]/div/div/div/fieldset/div/div/input'},fw)
+    },
+    run_query: function(){
+      I.click({xpath: '//*[@id="root"]/div/div/main/div/div/div[2]/main/div[1]/div/div[2]/aside/button'});
+    }
   });
 }

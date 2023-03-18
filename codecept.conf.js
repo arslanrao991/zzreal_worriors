@@ -1,4 +1,5 @@
 const { setHeadlessWhen, setCommonPlugins } = require('@codeceptjs/configure');
+const assert = require('assert');
 // turn on headless mode when running with HEADLESS=true environment variable
 // export HEADLESS=true && npx codeceptjs run
 setHeadlessWhen(process.env.HEADLESS);
