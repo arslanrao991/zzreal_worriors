@@ -1,0 +1,21 @@
+Task 3 - Create Gherkin-based UI tests:
+
+- Selected 3 user stories and identified and wrote its test cases.
+
+- Also wrote 15 gherkins test scenarios.
+
+Task 4 - Create Gherkin-scenrios automation:
+
+- I used codeceptjs with puppeteer to automate the gherkin scenerios 
+
+- Firstly, I ran some example code like automating a simple login page etc.
+
+- Understood how the codeceptjs with puppeteer works.
+
+- Then wrote all test cases for automation.
+
+Task 5 - Optimize my automation code:
+
+- Used functions for re-using the functionality.
+
+- Xpaths / CSS selectors also used.
