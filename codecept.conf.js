@@ -9,16 +9,21 @@ setCommonPlugins();
 /** @type {CodeceptJS.MainConfig} */
 exports.config = 
 {
-  tests: './*_test.js',
+  tests: './*_apitest.js',
   output: './output',
   helpers: 
   {
-    Puppeteer: 
+    // Puppeteer: 
+    // {
+    //   url: 'http://localhost:3000/',
+    //   show: true,
+    //   windowSize: '1200x900'
+    // }, 
+    REST: 
     {
-      url: 'http://localhost:3000/',
-      show: true,
-      windowSize: '1200x900'
-    }
+      endpoint: 'http://localhost:3000/api'
+    },
+    JSONResponse: {}
   },
   include: 
   {
@@ -26,3 +31,4 @@ exports.config =
   },
   name: 'zzreal_worriors'
 }
+
