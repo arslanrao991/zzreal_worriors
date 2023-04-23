@@ -94,6 +94,127 @@ The code is testing whether a session token can be retrieved from a POST request
 ```
   npx codeceptjs run --grep @tagname
 ```
+# Task 2 - Automate API test
+
+- Identify 3 API test scenarios per person for meta base Project
+    
+    ## Endpoint: api/user:
+    
+    ```jsx
+    Feature('Test Current User API');
+    
+    const assert = require('assert');
+    const axios = require('axios');
+    
+    Scenario('Get current user details - email and name', async ({ I }) => {
+      // Set the endpoint URL
+      const url = 'http://localhost:3000/api/user/current';
+    
+      // Set the request headers
+      const headers = {
+        'Content-Type': 'application/json',
+        'X-Metabase-Session': '679c4774-5214-48b0-b121-2dd96412b57a',
+      };
+    
+      // Send the GET request to the API endpoint
+      const response = await axios.get(url, { headers });
+    
+      // Assert the response status code
+      assert.equal(response.status, 200);
+    
+      // Assert the email and name of the user
+      assert.strictEqual(response.data.email, 'ab.rehman2709@gmail.com');
+      assert.strictEqual(response.data.first_name, 'Abdul');
+      assert.strictEqual(response.data.last_name, 'Rehman');
+    }).tag('@user');
+    
+    Scenario('Get current user details - incorrect email, first_name, and last_name', async ({ I }) => {
+      // Set the endpoint URL
+      const url = 'http://localhost:3000/api/user/current';
+    
+      // Set the request headers
+      const headers = {
+        'Content-Type': 'application/json',
+        'X-Metabase-Session': '679c4774-5214-48b0-b121-2dd96412b57a',
+      };
+    
+      // Send the GET request to the API endpoint
+      const response = await axios.get(url, { headers });
+    
+      // Assert the response status code
+      assert.equal(response.status, 200);
+    
+      // Assert that the email, first_name, and last_name are incorrect
+      assert.strictEqual(response.data.email, 'john.doe@example.com');
+      assert.notStrictEqual(response.data.first_name, 'John');
+      assert.notStrictEqual(response.data.last_name, 'Doe');
+    }).tag('@user');
+    ```
+    
+    ## Finding:
+    
+    ```jsx
+    CodeceptJS v3.4.1 #StandWithUkraine
+    Using test root "/home/abdul/Desktop/phase3"
+    
+    Test Current User API --
+      ✔ Get current user details - email and name @user in 110ms
+      ✔ Get current user details - incorrect email, first_name, and last_name @user in 113ms
+    
+      OK  | 2 passed   // 232ms
+    ```
+    
+    ## Endpoint: api/database:
+    
+    ```jsx
+    Feature('Test the database API');
+    
+    const assert = require('assert');
+    const axios = require('axios');
+    
+    Scenario('Should return the database with ID 1 ', async (I) => {
+        // Set the endpoint URL
+        const url = 'http://localhost:3000/api/database/1';
+      
+        // Set the request headers
+        const headers = {
+          'Content-Type': 'application/json',
+          'X-Metabase-Session': '679c4774-5214-48b0-b121-2dd96412b57a',
+        };
+      
+        // Send the GET request to the API endpoint
+        const response = await axios.get(url, { headers });
+      
+        //console.log(response.data); // Log response body
+      
+        assert.strictEqual(response.status, 200);
+        
+        assert.strictEqual(response.data.name, "Sample Database");
+        console.log(response.data.name); // Log response body
+      
+      }).tag('@database');
+    ```
+    
+    ## Finding:
+    
+    ```jsx
+    Using test root "/home/abdul/Desktop/phase3"
+    
+    Test the database API --
+    Sample Database
+      ✔ Should return the database with ID 1 @database in 112ms
+    
+      OK  | 1 passed   // 117ms
+    ```
+    
+    ## Endpoint: api/session:
+    
+    ## Endpoint: api/collection and api/collection/1:
+    
+- Update the framework by including required libraries to run API tests, e.g.
+    - I have used codecept.js
+- **Optimised and Modularized the code where possible**
+
 
 # Task 3 - Add Linters and SAST tools to your project
 
