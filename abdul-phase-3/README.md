@@ -90,6 +90,10 @@ Feature('Session Token Test');
 ```
 
 The code is testing whether a session token can be retrieved from a POST request to a local API endpoint. The first scenario tests if a valid session token is returned when valid credentials are provided, while the second scenario tests if no session token is returned when invalid credentials are provided.
+# **Run the file:**
+```
+  npx codeceptjs run --grep @tagname
+```
 
 # Task 3 - Add Linters and SAST tools to your project
 
