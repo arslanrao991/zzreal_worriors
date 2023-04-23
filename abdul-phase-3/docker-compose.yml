@@ -1,0 +1,9 @@
+version: '3'
+services:
+  api-tests:
+    build: .
+    volumes:
+      - .:/app
+    environment:
+      - NODE_ENV=production
+    command: npx codeceptjs run
