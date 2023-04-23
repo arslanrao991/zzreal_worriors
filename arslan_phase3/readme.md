@@ -1,9 +1,9 @@
 Since, we were already fimiliar with codecept so we did API test automation in codeceptjs.
 
-Step 1: Run Metabase from Docker
+## Step 1: Run Metabase from Docker
 In my case, I run the metabase on my mac in Docker.
 
-Step 2: Configure codecept.conf.js
+## Step 2: Configure codecept.conf.js
 .....
     REST: 
     {
@@ -12,8 +12,9 @@ Step 2: Configure codecept.conf.js
     JSONResponse: {}
 ....
 
-Step 3: Get the Session token by running the session_token_apitest.js
+## Step 3: Get the Session token by running the session_token_apitest.js
 
+```bash
 Feature('Session Token Test');
 
   Scenario('Get Session Token - Session Token Found', async ({ I }) => {
@@ -47,5 +48,6 @@ now we can use this session id
 
 const assert = require('assert');
 const { I } = require('codeceptjs');
+```
 
-step 4: Now we can use this session id to do api testing
+## Step 4: Now we can use this session id to do api testing
