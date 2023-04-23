@@ -1,0 +1,8 @@
+version: "3.9"
+
+services:
+  loadtest:
+    build: .
+    volumes:
+      - .:/app
+    command: run /app/*test.js
