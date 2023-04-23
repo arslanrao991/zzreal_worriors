@@ -9,7 +9,7 @@ setCommonPlugins();
 /** @type {CodeceptJS.MainConfig} */
 exports.config = 
 {
-  tests: './*_apitest.js',
+  tests: './arslan_phase3/*_apitest.js',
   output: './output',
   helpers: 
   {
@@ -29,6 +29,18 @@ exports.config =
   {
     I: './steps_file.js'
   },
-  name: 'zzreal_worriors'
+  name: 'zzreal_worriors',
+  lint: 
+  {
+    enabled: true,
+    files: ["./arslan_phase3/*_apitest.js"],
+    options: 
+    {
+      eslint: 
+      {
+        configFile: "./.eslintrc.json",
+      },
+    },
+  },
 }
 

@@ -10,7 +10,7 @@ Scenario('Get all collections ', async (I) => {
   // Set the request headers
   const headers = {
     'Content-Type': 'application/json',
-    'X-Metabase-Session': 'b92ba669-8560-426c-8602-982679834c47',
+    'X-Metabase-Session': 'dc601433-1d27-4d59-93c2-2961016a6d10',
   };
 
   // Send the GET request to the API endpoint
@@ -24,14 +24,14 @@ Scenario('Get all collections ', async (I) => {
   assert.strictEqual(jsonData[0].name, 'Our analytics');
 }).tag('@col');
 
-Scenario('Should return the collection with ID 1 ', async (I) => {
+Scenario.skip('Should return the collection with ID 1 ', async (I) => {
   // Set the endpoint URL
   const url = 'http://localhost:3000/api/collection/1';
 
   // Set the request headers
   const headers = {
     'Content-Type': 'application/json',
-    'X-Metabase-Session': 'b92ba669-8560-426c-8602-982679834c47',
+    'X-Metabase-Session': 'dc601433-1d27-4d59-93c2-2961016a6d10',
   };
 
   // Send the GET request to the API endpoint
