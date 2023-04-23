@@ -14,7 +14,7 @@ Scenario('Should post a question', async (I) => {
   // Set the request headers
   const headers = {
     'Content-Type': 'application/json',
-    'X-Metabase-Session': 'b92ba669-8560-426c-8602-982679834c47',
+    'X-Metabase-Session': 'dc601433-1d27-4d59-93c2-2961016a6d10',
   };
 
   const response = await axios.post(url, card, { headers });
