@@ -2,10 +2,10 @@
 
 # Task 1: Explore Unit Testing and Api Testing
 
-## **Step 1: Run Metabase from Docker
+## Step 1: Run Metabase from Docker
 In my case, I run the metabase on my mac in Docker.
 
-## **Step 2: Configure codecept.conf.js
+## Step 2: Configure codecept.conf.js
 .....
     REST: 
     {
@@ -14,7 +14,7 @@ In my case, I run the metabase on my mac in Docker.
     JSONResponse: {}
 ....
 
-## **Step 3: Get the Session token by running the session_token_apitest.js
+## Step 3: Get the Session token by running the session_token_apitest.js
 
 ```bash
 Feature('Session Token Test');
@@ -52,7 +52,7 @@ const assert = require('assert');
 const { I } = require('codeceptjs');
 ```
 
-## **Step 4: Now we can use this session id to do api testing
+## Step 4: Now we can use this session id to do api testing
 
 In this section I have research api and unit testing of metabase on google and also read the official documentation of metabse for api and unit testin.
 
