@@ -450,3 +450,33 @@ You can run it using :
 I ran a k6 stress test on an API endpoint that retrieves a session token for four minutes, with gradually increasing load up to a maximum of 100 virtual users. The test showed that all 88,832 iterations completed successfully, but with 100% error rate, indicating that the API endpoint did not return the expected response for any of the requests. The response time statistics showed an average response time of 135.29ms, with a median of 110.64ms and a 95th percentile of 324.69ms, which indicates that the endpoint can handle the load with reasonable performance, but the errors suggest there may be issues with the endpoint's functionality. Overall, the stress test was helpful in identifying potential issues with the API endpoint under heavy load, and further investigation is needed to determine the cause of the errors.
 
 
+# Meeting Notes
+
+People: Muhammad Arslan Tariq FastNU, Abdul Rehman, Syed Yousaf Qadri FastNU
+Status: In Progress
+
+## Meeting 1 (7 Feb 2023)
+
+- Discuss Use of Notion
+- Discuss Individual Tasks
+- Plan to research on different projects and discuss in next meeting
+
+## Meeting 2 (4 March 2023)
+
+- Discuss about project and selected Metabase as testing
+- Discuss about User Stories and divide work among ourselves
+- Discuss about how to use Gerkin language to do automation
+
+## Meeting 3 (11 March 2023)
+
+- Discuss different errors occurs during automation part and successfully debug
+- Explains the working of auomation with team members and show how it works
+
+## Meeting 4 (21 April 2023)
+- Discuss API Testing.
+- Discuss Different testing scenarios.
+- Share the configurations and understand members test scenarios.
+- Execute members test case for better understanding
+
+## Summary Project Phase 3
+All of the members have created a fully documented easily readable file/guide to go through phase 3 in their respective folders. Also created and checked tasks on notion and maintain meeting notes in this files.
