@@ -21,5 +21,8 @@
         "eslint-plugin-react": "^7.32.2",
         "k6": "^0.0.0",
         "puppeteer": "^5.5.0"
+    },
+    "dependencies": {
+        "codeceptjs-webdriverio": "^1.1.0"
     }
 }
